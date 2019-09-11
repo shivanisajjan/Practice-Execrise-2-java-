@@ -1,19 +1,19 @@
 package com.stackroute;
-import static org.junit.Assert.assertEquals;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class testMember {
-    private static MemberVariable app;
+import static org.junit.Assert.assertEquals;
+public class UserTest {
+    private static DisplayUser app;
 
     @BeforeClass
     public static void setup() {
         // This methods runs, before running any one of the test case
         // This method is used to initialize the required variables
-        app = new MemberVariable();
+        app = new DisplayUser();
 
     }
 
@@ -25,30 +25,17 @@ public class testMember {
 
     }
 
-
-
-
-
     @Test
-    public void q3()
+    public void testUser()
     {
         ArrayList list = new ArrayList();
+        list.add(true);
         list.add("shivani");
-        list.add(21);
-        list.add(50000.00);
-        assertEquals(list,app.mem("shivani",21,50000.00));
+        assertEquals(list,app.q7(19,"shivani"));
         list.clear();
-
-        list.add("poorvi");
-        list.add(22);
-        list.add(50000.00);
-        assertEquals(list,app.mem("poorvi",22,50000.00));
-        list.clear();
-
-        list.add("Hari Priya");
-        list.add(22);
-        list.add(50000.00);
-        assertEquals(list,app.mem("Hari Priya",22,50000.00));
+        list.add(false);
+        list.add("shivani");
+        assertEquals(list,app.q7(103,"shivani"));
         list.clear();
     }
 

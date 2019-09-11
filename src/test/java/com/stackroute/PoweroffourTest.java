@@ -3,9 +3,10 @@ package com.stackroute;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 
-public class testpoweroffour {
+import static org.junit.Assert.*;
+
+public class PoweroffourTest {
     private static poweroffour app;
 
     @BeforeClass
@@ -27,12 +28,9 @@ public class testpoweroffour {
     @Test
     public void testpoweroffour()
     {
-        assertEquals(
-                true , app.poweroffour(16));
-        assertEquals(
-                false , app.poweroffour(5));
-        assertEquals(
-                false , app.poweroffour(-1));
+        assertTrue(app.poweroffour(16));
+        assertFalse(app.poweroffour(5));
+        assertNotNull(app.poweroffour(-1));
         assertEquals(
                 false , app.poweroffour(8));
     }

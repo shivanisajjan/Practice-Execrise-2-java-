@@ -1,20 +1,20 @@
 package com.stackroute;
-import static org.junit.Assert.assertEquals;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class testLongFactorial {
+import static org.junit.Assert.assertEquals;
 
-    private static LongFactorial app;
+public class FactorialTest {
+    private static Factorial app;
 
     @BeforeClass
     public static void setup() {
         // This methods runs, before running any one of the test case
         // This method is used to initialize the required variables
-        app = new LongFactorial();
+        app = new Factorial();
 
     }
 
@@ -25,8 +25,30 @@ public class testLongFactorial {
         app = null;
 
     }
+
+
     @Test
-    public void q6Long()
+    public void testIntFactorial()
+    {
+        ArrayList list = new ArrayList();
+        list.add(1);
+        list.add(2);
+        list.add(6);
+        list.add(24);
+        list.add(120);
+        list.add(720);
+        list.add(5040);
+        list.add(40320);
+        list.add(362880);
+        list.add(3628800);
+        list.add(39916800);
+        list.add(479001600);
+        list.add("Out of range");
+        assertEquals(list,app.factorialInt());
+        list.clear();
+    }
+    @Test
+    public void testLongFactorial()
     {
         ArrayList list = new ArrayList();
         list.add(1L);

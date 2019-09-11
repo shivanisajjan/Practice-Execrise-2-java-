@@ -4,16 +4,16 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-public class testisPalindrome {
-    private static isPalindrome app;
+public class IsEvenTest {
+    private static IsEven app;
 
     @BeforeClass
     public static void setup() {
         // This methods runs, before running any one of the test case
         // This method is used to initialize the required variables
-        app = new isPalindrome();
+        app = new IsEven();
 
     }
 
@@ -25,19 +25,12 @@ public class testisPalindrome {
 
     }
 
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void testpalindrome()
+    public void testIsEven()
     {
-        assertEquals(
-                true , app.palindrome("1234321"));
-        assertEquals(
-                true, app.palindrome("shivavihs"));
-        assertEquals(
-                false, app.palindrome("shivavih"));
-
+        assertTrue(app.isEven1(16));
+        assertFalse(app.isEven1(5));
+        assertNotNull(app.isEven1(0));
     }
 
 }

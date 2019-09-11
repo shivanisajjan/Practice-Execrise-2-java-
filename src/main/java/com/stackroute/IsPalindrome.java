@@ -1,6 +1,6 @@
 package com.stackroute;
 
-public class isPalindrome {
+public class IsPalindrome {
     public boolean palindrome(String value){
         String str="";
         for(int i=value.length()-1;i>=0;i--) {

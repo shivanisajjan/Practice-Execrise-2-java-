@@ -14,8 +14,11 @@ public class User {
         }
         else age=-1;
     }
-    public void setname(String fname) {
-        firstName = fname;
+    public void setFirstName(String fname) {
+        this.firstName = fname;
+    }
+    public void setLastName(String lname){
+        this.lastName=lname;
     }
     public boolean isValidAge(){
         if(age>=18 && age<=60){
@@ -24,17 +27,17 @@ public class User {
         else return false;
     }
     public String getFullName(){
-        return firstName;
+        return firstName+" "+lastName;
     }
 }
 
 class DisplayUser{
 
-    public ArrayList q7(int age, String name){
+    public ArrayList q7(int age, String fname){
         ArrayList al=new ArrayList();
         User u=new User();
         u.setAge(age);
-        u.setname(name);
+        u.setFirstName(fname);
         al.add(u.isValidAge());
         al.add(u.getFullName());
         return al;
